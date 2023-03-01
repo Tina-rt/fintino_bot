@@ -3,7 +3,7 @@ from functions.algo import *
 
 import requests, json, re
 
-ACCESS_TOKEN = 'EAAzGFZBO1c4YBANcs5ATwlQ9tsRPp2NeplDFgdb4PPWXTBq1T41AjOKYZCFnffGkuAVHrLrgjeGNWIqTtu8pwwwJuvDawQKRIu10krzXD6yZBjDpxVA6jlA3rZCDMVE58b32BOuxnCYmvMmzR5EMHr6KjpYsB7ZAR9jRpfY2VQQlZCrZATzWAH6'
+ACCESS_TOKEN = 'EAAzGFZBO1c4YBADFcXsHB66bZCzBolDAQwlk1G4Y0gY7U8xNhG8NbiDmMi3HJumFEpypGKgqABhWAsfuSqx6INlEfPBIsmGyp5DZB7gNZASISNjrXGeTdimN2H8ERUgEN2QNQYyR7NcZBZBFIIWkB2FNivmTPTdSsThXYBmktM3ZBG00zw5gRD4'
 # ACCESS_TOKEN = 'EAA1wRuSPHuIBADjv4nmhWBWzFn78QFffqXZAyf5Sy0oxfH8F21Pqc3IRyURuHmADUNBJ5WqaJsoEelSFyzaLZAIZBuZAYHwaDZBNnAwRp7OFmkEYZCM7Yq9iYLXhKZANFtS5rEiySIeCZCIZAF6xZCaGDcGYnOxj1klR49VY861VS38wNl27LMromP'
 URL = 'https://graph.facebook.com/v2.6/me/messages?access_token='+ACCESS_TOKEN
 
@@ -250,6 +250,6 @@ def sendText(dest_id, text):
     }
     headers = {"Content-Type": "application/json"}
     r = requests.post(URL, data=json.dumps(data), headers=headers)
-    print(r)
+    print(r.text)
 
     # typing_off(dest_id)

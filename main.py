@@ -36,4 +36,6 @@ def webhook():
 
 
 if __name__ == '__main__':
+    # sendText("4525732360850264", "ok")
+
     app.run(debug=True, port=os.getenv("PORT", default=5000),)
