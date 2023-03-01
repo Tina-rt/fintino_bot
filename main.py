@@ -17,7 +17,7 @@ def index():
 def webhook():
     # print(url_for('static', filename='video.mp4'))
     data = request.get_json()
-    log(data)
+    
     # typing_off()
     for entry in data['entry']:
         for messaging_event in entry['messaging']:
@@ -29,6 +29,7 @@ def webhook():
                 if 'text' in messaging_event['message'] and 'quick_reply' not in messaging_event['message']:
                     query = messaging_event['message']['text']
                     print(query)
+
     return "ok", 200
 
 
