@@ -1,5 +1,6 @@
 from flask import Flask, jsonify, request
 import os
+from functions.messenger_api_part import *
 
 app = Flask(__name__)
 
@@ -29,6 +30,7 @@ def webhook():
                 if 'text' in messaging_event['message'] and 'quick_reply' not in messaging_event['message']:
                     query = messaging_event['message']['text']
                     print(query)
+                    sendText(sender_id, "Hey")
 
     return "ok", 200
 
