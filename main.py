@@ -4,7 +4,7 @@ from functions.messenger_api_part import *
 from utils.TfIdf import *
 
 app = Flask(__name__)
-
+print("init")
 
 @app.route('/', methods=['GET'])
 def index():
