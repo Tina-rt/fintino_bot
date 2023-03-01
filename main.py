@@ -1,6 +1,7 @@
 from flask import Flask, jsonify, request
 import os
 from functions.messenger_api_part import *
+from lib.TfIdf import *
 
 app = Flask(__name__)
 
