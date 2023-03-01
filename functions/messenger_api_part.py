@@ -237,7 +237,7 @@ def send_response_quickreply(dest_id, reply, payloads):
 	print(r.content)
 
 def sendText(dest_id, text):
-    typing_on(dest_id)
+    # typing_on(dest_id)
     data = {
         "recipient": {
             "id": f"{dest_id}"
@@ -250,4 +250,6 @@ def sendText(dest_id, text):
     }
     headers = {"Content-Type": "application/json"}
     r = requests.post(URL, data=json.dumps(data), headers=headers)
-    typing_off(dest_id)
+    print(r)
+
+    # typing_off(dest_id)

@@ -24,7 +24,7 @@ def webhook():
         for messaging_event in entry['messaging']:
             
             sender_id = messaging_event['sender']['id']
-            
+            print(sender_id)
             # typing_on(sender_id)
             if 'message' in messaging_event:
                 if 'text' in messaging_event['message'] and 'quick_reply' not in messaging_event['message']:
